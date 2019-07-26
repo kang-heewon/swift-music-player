@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		005D341522EB0CD300C397AA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		00B51DBD22EB031500716809 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B51DC022EB031500716809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00B51DC222EB031500716809 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +78,7 @@
 		00B51DB422EB031500716809 = {
 			isa = PBXGroup;
 			children = (
+				005D341522EB0CD300C397AA /* README.md */,
 				00B51DBF22EB031500716809 /* MusicPlayer */,
 				00B51DD422EB031600716809 /* MusicPlayerTests */,
 				00B51DDF22EB031600716809 /* MusicPlayerUITests */,
