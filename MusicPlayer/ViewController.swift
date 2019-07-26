@@ -12,18 +12,24 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate {
     
+    // MARK:- Properties
     var player: AVAudioPlayer!
     var timer: Timer!
     
+    // MARK: IBOutlets
     @IBOutlet var playPauseButton: UIButton!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var progressSlider: UISlider!
     
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        //        self.addViewsWithCode()
         self.initializePlayer()
     }
     
+    // MARK: - Methods
+    // MARK: Custom Method
     func initializePlayer() {
         
         guard let soundAsset: NSDataAsset = NSDataAsset(name: "sound") else {
@@ -92,7 +98,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         centerX = button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         
         let centerY: NSLayoutConstraint
-        centerY = NSLayoutConstraint(item: button, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 0.8, constant: 0)
+        centerY = NSLayoutConstraint(item: button, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutAttribute.centerY, multiplier: 0.8, constant: 0)
         
         let width: NSLayoutConstraint
         width = button.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.5)
@@ -199,7 +205,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         let message: String
         message = "오디오 플레이어 오류 발생 \(error.localizedDescription)"
         
-        let alert: UIAlertController = UIAlertController(title: "알림", message: message, preferredStyle:  UIAlertController.Style.alert)
+        let alert: UIAlertController = UIAlertController(title: "알림", message: message, preferredStyle: UIAlertController.Style.alert)
         
         let okAction: UIAlertAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default) { (action: UIAlertAction) -> Void in
             
